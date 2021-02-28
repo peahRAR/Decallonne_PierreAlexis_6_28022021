@@ -1,0 +1,19 @@
+{
+  "name": "sopeckoko",
+  "version": "1.0.0",
+  "description": "Projet 6: Construisez une API sécurisée pour une application d'avis gastronomiques",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peahRAR/Decallonne_PierreAlexis_6_28022021.git"
+  },
+  "author": "Péah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peahRAR/Decallonne_PierreAlexis_6_28022021/issues"
+  },
+  "homepage": "https://github.com/peahRAR/Decallonne_PierreAlexis_6_28022021#readme"
+}
