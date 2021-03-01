@@ -1,5 +1,12 @@
 const http = require('http');
 const app = require('./app');
+const mongoose = require('mongoose');
+
+mongoose.connect("mongodb+srv://admin:ob7Vur1tITpFZMDA@cluster0.ese2r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  { useNewUrlParser: true,
+    useUnifiedTopology: true })
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
