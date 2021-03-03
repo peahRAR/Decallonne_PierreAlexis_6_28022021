@@ -1,8 +1,9 @@
+// Imports
 const http = require('http');
 const app = require('./app');
-const mongoose = require('mongoose');
 
-const normalizePort = val => {
+// Definition du port de connexion
+const normalizePort = (val) => {
     const port = parseInt(val, 10);
   
     if (isNaN(port)) {
@@ -14,9 +15,12 @@ const normalizePort = val => {
     return false;
   };
 
+
+// Ajout du port de connexion
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
+// Gestion des erreurs
 const errorHandler = error => {
   if (error.syscall !== 'listen') {
     throw error;
@@ -37,6 +41,7 @@ const errorHandler = error => {
   }
 };
 
+// Constante d'appel au server
 const server = http.createServer(app);
 
 server.on('error', errorHandler);
@@ -46,4 +51,5 @@ server.on('listening', () => {
   console.log('Listening on ' + bind);
 });
 
+// Ecoute du server
 server.listen(port);
