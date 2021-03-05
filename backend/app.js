@@ -9,9 +9,10 @@ require('dotenv').config();
 
 // Déclaration routes
 const userRoutes = require('./routes/user');
+const saucesRoutes = require('./routes/sauces'),
 
 // Connexion à MongoDB Atlas
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS }@cluster0.ese2r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ese2r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -26,5 +27,6 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.json());
 app.use('/api/auth', userRoutes);
+app.use('/api/sauces', saucesRoutes);
 
 module.exports = app;

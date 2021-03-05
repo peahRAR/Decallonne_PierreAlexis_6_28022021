@@ -32,7 +32,7 @@ exports.login = (req, res, next) => {
                        userId: user._id,
                        token: jwt.sign(
                            {userId: user._id},
-                           'RAMDOM_TOKEN_SECRET', // Changer pour plus long en phase de prod et modifié dans middleware/auth
+                           `${process.env.RDM_TOKEN}`,
                            { expiresIn: '24h'}
                        )
                    }); 
