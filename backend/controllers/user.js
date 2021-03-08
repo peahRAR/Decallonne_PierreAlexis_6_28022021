@@ -32,7 +32,7 @@ exports.login = (req, res, next) => {
                        userId: user._id,
                        token: jwt.sign(
                            {userId: user._id},
-                           `${process.env.RDM_TOKEN}`,
+                           `"${process.env.RDM_TOKEN}"`,
                            { expiresIn: '24h'}
                        )
                    }); 
